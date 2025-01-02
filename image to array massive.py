@@ -10,6 +10,7 @@ def select_image_file():
     if file_path:  # Проверяем, выбран ли файл
         image = Image.open(file_path)
         pixels = np.array(image)
+        np.set_printoptions(threshold=np.inf)  # Выводим все элементы массива
         print(pixels)
     else:
         print("Файл не выбран.")
